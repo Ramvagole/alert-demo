@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Showing Alerts</title>
+        <style>
+            input{
+                height: 25px;
+            }
+            #input_from{
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 150px;
+            }
+            #buttons{
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+            }
+        </style>
+	</head>
+	<body>
+        <div id="input_from">
+            <input type="text" id="firstname" placeholder="First Name" value="">
+            <input type="text" id="lastname" placeholder="Last Name" value="">
+        </div>
+        <div id="buttons">
+            <button onclick="showFirstName()">FIRSTNAME</button>
+            <button onclick="showLastName()">LASTNAME</button>
+            <button onclick="showFullName()">FIRSTNAME NAME</button>
+        </div>
+		<script type="text/javascript">
+            function showFirstName() {
+			    alert(document.getElementById("firstname").value)
+			}
+
+            function showLastName() {
+                alert(document.getElementById("lastname").value)             
+            }
+
+            function showFullName() {
+                alert(`${document.getElementById("firstname").value} ${document.getElementById("lastname").value}`)
+                                
+            }
+        </script>
+	</body>
+</html>
